@@ -1,6 +1,7 @@
 ## pip-outdated requirements.txt
 # https://pypi.org/project/pip-outdated/
 
+# Refine pipeline (scripts/refine/*) and webfont compression
 appdirs~=1.4.4
 six~=1.16.0
 fs<3,>=2.2.0
@@ -8,3 +9,7 @@ pytz~=2022.7
 fonttools~=4.38.0
 Brotli~=1.0.9
 zopfli~=0.2.2
+
+# Google Fonts build (make build → gftools builder)
+gftools
+fontmake

@@ -14,11 +14,19 @@ fonts/
 └── PretendardGOV/
 ```
 
-현재 배포용 산출물은 `packages/<family>/dist/public/` 및 `packages/<family>/dist/web/` 경로에 위치하며, 이 디렉터리로의 매핑은 아래 작업에서 다룹니다. (Google Fonts 제출 시점에 바이너리가 이 위치에 존재해야 합니다.)
+바이너리는 루트 `Makefile`이 `sources/config-*.yaml`을 `gftools builder`로 돌려서 생성합니다.
 
-| 대상 | 기존 경로 | 이 디렉터리의 위치 |
-| --- | --- | --- |
-| OTF (static) | `packages/<family>/dist/public/static/*.otf` | `fonts/<Family>/otf/` |
-| TTF (static) | `packages/<family>/dist/public/static/alternative/*.ttf` | `fonts/<Family>/ttf/` |
-| Variable TTF | `packages/<family>/dist/public/variable/*.ttf` | `fonts/<Family>/variable/` |
-| WOFF2 | `packages/<family>/dist/web/static/woff2/*.woff2` | `fonts/<Family>/webfonts/` |
+```bash
+make build
+```
+
+커밋되어 있는 현재 바이너리는 `packages/<family>/dist/`의 산출물을 한 차례 복사한 스냅샷입니다. 재생성 흐름(커맨드가 돌 때)은 `make build`가 담당하며, 결과는 `fonts/<Family>/{otf,ttf,variable,webfonts}`에 다시 쓰입니다.
+
+| 포맷 | 생성 위치 |
+| --- | --- |
+| OTF (static) | `fonts/<Family>/otf/` |
+| TTF (static) | `fonts/<Family>/ttf/` |
+| Variable TTF | `fonts/<Family>/variable/` |
+| WOFF2 | `fonts/<Family>/webfonts/` |
+
+Pretendard Std는 `.glyphspackage` 없이 `scripts/refine/create-std.py`를 통해 Pretendard에서 파생되므로 `make build` 대상에 포함되지 않습니다.
