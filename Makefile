@@ -21,9 +21,10 @@ build.stamp: venv $(wildcard sources/config*.yaml)
 	rm -rf fonts
 	(for config in sources/config*.yaml; do . venv/bin/activate; gftools builder $$config || exit 1; done) && touch build.stamp
 
-venv/touchfile: requirements.txt
+venv/touchfile: requirements.txt scripts/patch_glyphslib_predicate.py
 	test -d venv || python3 -m venv venv
 	. venv/bin/activate; pip install -Ur requirements.txt
+	. venv/bin/activate; python scripts/patch_glyphslib_predicate.py
 	touch venv/touchfile
 
 test: build.stamp

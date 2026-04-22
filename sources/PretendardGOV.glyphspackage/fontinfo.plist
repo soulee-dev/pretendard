@@ -8319,9 +8319,6 @@ code = "featureNames {
     name \"Korean localization\";
 };
 
-@NULL_SS05 = [];
-ignore sub @NULL_SS05';
-
 lookup LOOKUP_SS05_1;
 lookup LOOKUP_SS05_2;
 lookup LOOKUP_SS05_HAN;
