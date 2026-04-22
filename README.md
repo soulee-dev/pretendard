@@ -1,8 +1,8 @@
 # Pretendard
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/orioncactus/pretendard/blob/HEAD/docs/images/thumbnail/dark/thumbnail.svg">
-  <img src="https://github.com/orioncactus/pretendard/blob/HEAD/docs/images/thumbnail/light/thumbnail.svg" alt="Pretendard">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/orioncactus/pretendard/blob/HEAD/documentation/images/thumbnail/dark/thumbnail.svg">
+  <img src="https://github.com/orioncactus/pretendard/blob/HEAD/documentation/images/thumbnail/light/thumbnail.svg" alt="Pretendard">
 </picture>
 
 Pretendard는 크로스 플랫폼에서 자연스럽게 보이며 다국어 타이포그래피에 적합한 현대적인 글꼴입니다. [Inter](https://github.com/rsms/inter), [본고딕](https://fonts.adobe.com/fonts/source-han-sans-korean), [M PLUS 1p](https://github.com/coz-m/MPLUS_FONTS)를 바탕으로 다듬어 9가지 굵기와 가변 글꼴을 제공합니다.
