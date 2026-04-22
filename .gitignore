@@ -332,3 +332,13 @@ typings/
 # Glyphs files
 *(Autosaved).*
 UIState.plist
+
+# Python virtual environment (see requirements.txt for reproducible install)
+venv/
+.venv/
+env/
+
+# gftools / fontmake intermediate artifacts
+instance_ufos/
+master_ufo/
+build.stamp
